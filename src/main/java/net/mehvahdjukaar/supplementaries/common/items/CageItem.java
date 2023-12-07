@@ -56,4 +56,13 @@ public class CageItem extends AbstractMobContainerItem {
         ClientRegistry.registerISTER(consumer, CageItemRenderer::new);
     }
 
+    @Override
+    public boolean canFitInsideContainers() {
+        return false;
+    }
+
+    @Override
+    public boolean canFitInsideContainerItems() {
+        return canFitInsideContainers();
+    }
 }
