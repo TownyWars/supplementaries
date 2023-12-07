@@ -57,4 +57,14 @@ public class SafeItem extends BlockItem {
         }
         return Optional.empty();
     }
+
+    @Override
+    public boolean canFitInsideContainers() {
+        return false;
+    }
+
+    @Override
+    public boolean canFitInsideContainerItems() {
+        return canFitInsideContainers();
+    }
 }
